@@ -1,15 +1,11 @@
 import css from './Counter.module.css';
 
-export const FeedbackOptions = props => {
-  
+export const FeedbackOptions = ({ onLeaveFeedback, options }) => {
   const handleFeedbackOption = evt => {
-    const { onLeaveFeedback } = props;
     const { name } = evt.target;
 
     onLeaveFeedback(name);
   };
-
-  const { options } = props;
 
   return (
     <div className={css.feedbackOptions}>
